@@ -8,3 +8,20 @@ this is an app made with flutter, it's a profil UI with Dark And White theme.
 and the changing of the theme is by clicking on the floating button.
 
 ## ScreenShot:
+### White Theme:
+<img src="Screenshot/white.jpg" />
+
+### Dark Theme:
+<img src="Screenshot/dark.jpg" />
+
+## Tools & languages:
+* Android Studio
+* Flutter
+* Dart
+
+## Contribution:
+Feel free to fork this project and add whatever you like. If you have any suggestions or any comments please feel free to contact me or to open an issue.
+
+## Team:
+[Jetlighters](https://github.com/JetLightStudio) having fun.
+
