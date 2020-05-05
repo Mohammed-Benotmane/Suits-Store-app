@@ -11,19 +11,34 @@ class Profile extends StatefulWidget {
 }
 
 class _ProfileState extends State<Profile> {
+  bool pressed = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[850],
+      backgroundColor: pressed ? Colors.grey[850] : Colors.grey[300],
       appBar: AppBar(
         title: Text(
-            'Profile',
-            style: TextStyle(
-              color: Colors.grey[300],
-            ),
+          'Profile',
+          style: pressed
+              ? TextStyle(
+                  color: Colors.grey[300],
+                )
+              : TextStyle(
+                  color: Colors.grey[800],
+                ),
         ),
         centerTitle: true,
-        backgroundColor: Colors.grey[900],
+        backgroundColor: pressed ? Colors.grey[900] : Colors.grey[100],
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: pressed ?Text('White', style: TextStyle(color: Colors.grey[850]),):Text('Dark'),
+        backgroundColor: pressed ?Colors.grey[100]:Colors.grey[850],
+        onPressed: () {
+          setState(() {
+            pressed = !pressed;
+          });
+        },
       ),
       body: Padding(
         padding: const EdgeInsets.all(10.0),
@@ -37,7 +52,7 @@ class _ProfileState extends State<Profile> {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(15.0),
               ),
-              color: Colors.grey[700],
+              color: pressed ? Colors.grey[700] : Colors.grey[100],
               child: Column(
                 children: <Widget>[
                   SizedBox(
@@ -56,7 +71,7 @@ class _ProfileState extends State<Profile> {
                         fontSize: 14.0,
                         fontWeight: FontWeight.bold,
                         letterSpacing: 0.75,
-                        color: Colors.grey[200]),
+                        color: pressed ? Colors.grey[200] : Colors.grey[900]),
                   ),
                   SizedBox(
                     height: 10.0,
@@ -80,11 +95,11 @@ class _ProfileState extends State<Profile> {
             ),
             Container(
               margin: EdgeInsets.fromLTRB(5.0, 0.0, 5.0, 0.0),
-              color: Colors.grey[700],
+              color:pressed ?Colors.grey[700]:Colors.grey[100],
               child: ListTile(
                 leading: Icon(
                   Icons.border_color,
-                  color: Colors.grey[400],
+                  color:pressed ?Colors.grey[400]:Colors.grey[800],
                 ),
                 title: Text(
                   'Modifier Informations',
@@ -94,19 +109,23 @@ class _ProfileState extends State<Profile> {
                     letterSpacing: 0.5,
                   ),
                 ),
-                trailing:
-                    IconButton(icon: Icon(Icons.navigate_next), onPressed: () {},
-                    color: Colors.grey[400],),
+                trailing: IconButton(
+                  icon: Icon(Icons.navigate_next),
+                  onPressed: () {},
+                  color: Colors.grey[400],
+                ),
               ),
             ),
-            Divider(height: 0.20,),
+            Divider(
+              height: 0.20,
+            ),
             Container(
               margin: EdgeInsets.fromLTRB(5.0, 0.0, 5.0, 0.0),
-              color: Colors.grey[700],
+              color: pressed ?Colors.grey[700]:Colors.grey[100],
               child: ListTile(
                 leading: Icon(
                   Icons.settings,
-                  color: Colors.grey[400],
+                  color: pressed ?Colors.grey[400]:Colors.grey[800],
                 ),
                 title: Text(
                   'Paramètres',
@@ -116,19 +135,23 @@ class _ProfileState extends State<Profile> {
                     letterSpacing: 0.5,
                   ),
                 ),
-                trailing:
-                IconButton(icon: Icon(Icons.navigate_next), onPressed: () {},
-                  color: Colors.grey[400],),
+                trailing: IconButton(
+                  icon: Icon(Icons.navigate_next),
+                  onPressed: () {},
+                  color: Colors.grey[400],
+                ),
               ),
             ),
-            Divider(height: 0.20,),
+            Divider(
+              height: 0.20,
+            ),
             Container(
               margin: EdgeInsets.fromLTRB(5.0, 0.0, 5.0, 0.0),
-              color: Colors.grey[700],
+              color: pressed ?Colors.grey[700]:Colors.grey[100],
               child: ListTile(
                 leading: Icon(
                   Icons.help,
-                  color: Colors.grey[400],
+                  color: pressed ?Colors.grey[400]:Colors.grey[800],
                 ),
                 title: Text(
                   'Aide',
@@ -138,19 +161,23 @@ class _ProfileState extends State<Profile> {
                     letterSpacing: 0.5,
                   ),
                 ),
-                trailing:
-                IconButton(icon: Icon(Icons.navigate_next), onPressed: () {},
-                  color: Colors.grey[400],),
+                trailing: IconButton(
+                  icon: Icon(Icons.navigate_next),
+                  onPressed: () {},
+                  color: Colors.grey[400],
+                ),
               ),
             ),
-            Divider(height: 0.20,),
+            Divider(
+              height: 0.20,
+            ),
             Container(
               margin: EdgeInsets.fromLTRB(5.0, 0.0, 5.0, 0.0),
-              color: Colors.grey[700],
+              color: pressed ?Colors.grey[700]:Colors.grey[100],
               child: ListTile(
                 leading: Icon(
                   Icons.message,
-                  color: Colors.grey[400],
+                  color: pressed ?Colors.grey[400]:Colors.grey[800],
                 ),
                 title: Text(
                   'Conditions d\'utilisation',
@@ -160,19 +187,23 @@ class _ProfileState extends State<Profile> {
                     letterSpacing: 0.5,
                   ),
                 ),
-                trailing:
-                IconButton(icon: Icon(Icons.navigate_next), onPressed: () {},
-                  color: Colors.grey[400],),
+                trailing: IconButton(
+                  icon: Icon(Icons.navigate_next),
+                  onPressed: () {},
+                  color: Colors.grey[400],
+                ),
               ),
             ),
-            Divider(height: 0.20,),
+            Divider(
+              height: 0.20,
+            ),
             Container(
               margin: EdgeInsets.fromLTRB(5.0, 0.0, 5.0, 0.0),
-              color: Colors.grey[700],
+              color: pressed ?Colors.grey[700]:Colors.grey[100],
               child: ListTile(
                 leading: Icon(
                   Icons.error,
-                  color: Colors.grey[400],
+                  color: pressed ?Colors.grey[400]:Colors.grey[800],
                 ),
                 title: Text(
                   'A propos de nous',
@@ -182,15 +213,19 @@ class _ProfileState extends State<Profile> {
                     letterSpacing: 0.5,
                   ),
                 ),
-                trailing:
-                IconButton(icon: Icon(Icons.navigate_next), onPressed: () {},
-                  color: Colors.grey[400],),
+                trailing: IconButton(
+                  icon: Icon(Icons.navigate_next),
+                  onPressed: () {},
+                  color: Colors.grey[400],
+                ),
               ),
             ),
-            Divider(height: 0.20,),
+            Divider(
+              height: 0.20,
+            ),
             Container(
               margin: EdgeInsets.fromLTRB(5.0, 0.0, 5.0, 0.0),
-              color: Colors.grey[700],
+              color: pressed ?Colors.grey[700]:Colors.grey[100],
               child: ListTile(
                 leading: Icon(
                   Icons.cancel,
@@ -204,12 +239,13 @@ class _ProfileState extends State<Profile> {
                     letterSpacing: 0.5,
                   ),
                 ),
-                trailing:
-                IconButton(icon: Icon(Icons.navigate_next), onPressed: () {},
-                  color: Colors.grey[400],),
+                trailing: IconButton(
+                  icon: Icon(Icons.navigate_next),
+                  onPressed: () {},
+                  color: Colors.grey[400],
+                ),
               ),
             ),
-
           ],
         ),
       ),
