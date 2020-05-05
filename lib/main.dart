@@ -49,6 +49,7 @@ class _ProfileState extends State<Profile> {
               height: 50.0,
             ),
             Card(
+              elevation: 4,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(15.0),
               ),
