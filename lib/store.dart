@@ -45,14 +45,22 @@ class _StoreState extends State<Store> {
                     itemCount: 3,
                     shrinkWrap: true,
                     itemBuilder: (context,index){
-                  return Card(
-                    child: Text('$index'),
-                  );
+                    return clothesCard(index);
                 }),
               ),
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  clothesCard(int index){
+    return Card(
+      child: Column(
+        children: <Widget>[
+          AssetImage()
+        ],
       ),
     );
   }
