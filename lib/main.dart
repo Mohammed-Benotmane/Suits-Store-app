@@ -34,13 +34,11 @@ class _ProfileState extends State<Profile> {
       floatingActionButton: FloatingActionButton(
         child: pressed ?Text('White', style: TextStyle(color: Colors.grey[850]),):Text('Dark'),
         backgroundColor: pressed ?Colors.grey[100]:Colors.grey[850],
-        onPressed: () {
-          setState(() {
-            pressed = !pressed;
-          });
-        },
+        onPressed: () => setState(() => pressed = !pressed),
       ),
-      body: Padding(
+      body:
+      pressed ? SizedBox() :
+      Padding(
         padding: const EdgeInsets.all(10.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
