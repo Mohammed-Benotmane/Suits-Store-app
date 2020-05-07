@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:profiledarktheme/main.dart';
 import 'package:profiledarktheme/profile.dart';
+import 'package:profiledarktheme/store.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -12,10 +13,7 @@ class _HomeState extends State<Home> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
-    ),
+    Store(),
     Profile(),
   ];
 

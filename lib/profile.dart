@@ -8,7 +8,7 @@ class Profile extends StatefulWidget {
 }
 
 class _ProfileState extends State<Profile> {
-  bool pressed = true;
+  bool pressed = false;
 
   @override
   Widget build(BuildContext context) {
