@@ -9,6 +9,9 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  Color lightBrown = Color(0xFFdeb887);
+  Color veryLightBrown = Color(0xFFfff5ee);
+  Color darkBrown = Color(0xFF743a34);
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
@@ -30,6 +33,8 @@ class _HomeState extends State<Home> {
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: lightBrown,
+        unselectedItemColor:  veryLightBrown,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.store),
@@ -41,7 +46,7 @@ class _HomeState extends State<Home> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Color(0xFF743a34),
+        selectedItemColor: darkBrown,
         onTap: _onItemTapped,
       ),
     );

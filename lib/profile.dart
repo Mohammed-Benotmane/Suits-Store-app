@@ -16,7 +16,7 @@ class _ProfileState extends State<Profile> {
       backgroundColor: pressed ? Colors.grey[850] : Colors.grey[300],
       appBar: AppBar(
         title: Text(
-          'Profile',
+          'Suits Store',
           style: pressed
               ? TextStyle(
             color: Colors.grey[300],
