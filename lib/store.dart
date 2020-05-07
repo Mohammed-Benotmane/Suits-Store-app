@@ -59,7 +59,7 @@ class _StoreState extends State<Store> {
     return Card(
       child: Column(
         children: <Widget>[
-          AssetImage()
+          AssetImage('assets/newarrival$index.jpg')
         ],
       ),
     );
