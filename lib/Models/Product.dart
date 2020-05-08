@@ -5,6 +5,6 @@ class Product{
   String title;
   String type;
   String description;
-  double price;
+  int price;
   Product(this.title,this.type,this.index,this.description,this.price);
 }

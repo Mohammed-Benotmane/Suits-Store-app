@@ -56,7 +56,25 @@ class _ProductDetailState extends State<ProductDetail> {
                     color: darkBrown,
                     fontSize: 18,
                     letterSpacing: 2,
-                    fontWeight: FontWeight.w600)),
+                    fontWeight: FontWeight.w600,
+                ),
+            ),
+            SizedBox(height: 10,),
+            Text(
+              '${widget.temp.description}',
+                style: TextStyle(
+                    color: Colors.grey.shade600,
+                    ),
+            ),
+            SizedBox(height: 20,),
+            Text(
+                '${widget.temp.price}\$',
+                style: TextStyle(
+                    fontWeight:FontWeight.w600,
+                    color: Colors.green[700],
+                    fontSize: 18,
+                ),
+            ),
           ],
         ),
       ),

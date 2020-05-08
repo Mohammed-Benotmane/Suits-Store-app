@@ -12,12 +12,12 @@ class _StoreState extends State<Store> {
   Color veryLightBrown = Color(0xFFfff5ee);
   Color darkBrown = Color(0xFF743a34);
   List<Product> products = [
-    Product("Black Suit", "newarrival", 1),
-    Product("Brown Suit", "newarrival", 2),
-    Product("Ties", "newarrival", 3),
-    Product("Grey Suit", "suit", 1),
-    Product("Daniel Suit", "suit", 2),
-    Product("Hat", "suit", 3),
+    Product("Black Suit", "newarrival", 1,'this is a black suit this is a black suit this is a black suit',30000),
+    Product("Brown Suit", "newarrival", 2,'this is a black suit this is a black suit this is a black suit s is a black suit this is a blac',40000),
+    Product("Ties", "newarrival", 3,'this is a black suit this is a black suit this is a black suit',8300),
+    Product("Grey Suit", "suit", 1,'this is a black suit this is a black suit this is a black suit',15000),
+    Product("Daniel Suit", "suit", 2,'this is a black suit this is a black suit this is a black suit',60000),
+    Product("Hat", "suit", 3,'this is a black suit this is a black suit this is a black suit',11900),
   ];
 
   //List<String> newAdded= ["Black Suit","Brown Suit","Ties"];
