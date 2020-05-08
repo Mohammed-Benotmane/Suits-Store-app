@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:profiledarktheme/product_detail.dart';
 
 class Store extends StatefulWidget {
   @override
@@ -98,29 +99,36 @@ class _StoreState extends State<Store> {
   }
 
   clothesCard(String picName,String title){
-    return Container(
-      width: MediaQuery.of(context).size.width/2.5,
-      child: Card(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(25.0),
-        ),
-        color: lightBrown,
-        child: Padding(
-          padding: const EdgeInsets.all(6.0),
-          child: Column(
-            children: <Widget>[
-              ClipRRect(
-                borderRadius: BorderRadius.circular(25),
-                child: Image.asset('assets/$picName.jpg',
-                  height: MediaQuery.of(context).size.height/6),
-              ),
-              SizedBox(height: 10),
-              Container(
-                color: darkBrown,
-              width: 20,height: 2),
-              SizedBox(height: 10),
-              Text(title,style: TextStyle(color: darkBrown,fontSize: 18,fontWeight: FontWeight.w600)),
-            ],
+    return GestureDetector(
+      onTap: (){
+        Navigator.push(context, MaterialPageRoute(builder: (context){
+          return ProductDetail();
+        }));
+      },
+      child: Container(
+        width: MediaQuery.of(context).size.width/2.5,
+        child: Card(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(25.0),
+          ),
+          color: lightBrown,
+          child: Padding(
+            padding: const EdgeInsets.all(6.0),
+            child: Column(
+              children: <Widget>[
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(25),
+                  child: Image.asset('assets/$picName.jpg',
+                    height: MediaQuery.of(context).size.height/6),
+                ),
+                SizedBox(height: 10),
+                Container(
+                  color: darkBrown,
+                width: 20,height: 2),
+                SizedBox(height: 10),
+                Text(title,style: TextStyle(color: darkBrown,fontSize: 18,fontWeight: FontWeight.w600)),
+              ],
+            ),
           ),
         ),
       ),
