@@ -31,14 +31,34 @@ class _ProductDetailState extends State<ProductDetail> {
         centerTitle: true,
         backgroundColor: lightBrown,
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
-          Image.asset(
-            'assets/${widget.temp.type}${widget.temp.index}.jpg',
-            height: MediaQuery.of(context).size.height / 4,
-          ),
-        ],
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(10,20,10,5),
+        child: Column(
+
+          children: <Widget>[
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(25),
+                  child: Image.asset(
+                    'assets/${widget.temp.type}${widget.temp.index}.jpg',
+                    height: MediaQuery.of(context).size.height / 4,
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 15,),
+            Container(color: darkBrown, width: 30, height: 2),
+            SizedBox(height: 15,),
+            Text(widget.temp.title,
+                style: TextStyle(
+                    color: darkBrown,
+                    fontSize: 18,
+                    letterSpacing: 2,
+                    fontWeight: FontWeight.w600)),
+          ],
+        ),
       ),
     );
   }

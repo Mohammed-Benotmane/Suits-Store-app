@@ -4,5 +4,7 @@ class Product{
   int index;
   String title;
   String type;
-  Product(this.title,this.type,this.index);
+  String description;
+  double price;
+  Product(this.title,this.type,this.index,this.description,this.price);
 }
