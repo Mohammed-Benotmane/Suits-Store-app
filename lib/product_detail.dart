@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'Models/Product.dart';
 
@@ -31,8 +32,15 @@ class _ProductDetailState extends State<ProductDetail> {
         backgroundColor: lightBrown,
       ),
       body: Column(
-
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: <Widget>[
+          Image.asset(
+            'assets/${widget.temp.type}${widget.temp.index}.jpg',
+            height: MediaQuery.of(context).size.height / 4,
+          ),
+        ],
       ),
     );
   }
+
 }
