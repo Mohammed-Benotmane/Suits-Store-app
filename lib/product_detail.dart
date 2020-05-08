@@ -9,10 +9,30 @@ class ProductDetail extends StatefulWidget {
 }
 
 class _ProductDetailState extends State<ProductDetail> {
+  Color lightBrown = Color(0xFFdeb887);
+  Color veryLightBrown = Color(0xFFfff5ee);
+  Color darkBrown = Color(0xFF743a34);
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text('${widget.temp.title}'),
+    return Scaffold(
+      backgroundColor: veryLightBrown,
+      appBar: AppBar(
+        leading: IconButton(
+            icon: Icon(Icons.clear, color: darkBrown), onPressed: () {}),
+        title: Text(
+          'Product Detail',
+          style: TextStyle(color: darkBrown),
+        ),
+        actions: <Widget>[
+          IconButton(
+              icon: Icon(Icons.star, color: darkBrown), onPressed: () {})
+        ],
+        centerTitle: true,
+        backgroundColor: lightBrown,
+      ),
+      body: Column(
+
+      ),
     );
   }
 }

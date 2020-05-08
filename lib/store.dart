@@ -11,7 +11,6 @@ class _StoreState extends State<Store> {
   Color lightBrown = Color(0xFFdeb887);
   Color veryLightBrown = Color(0xFFfff5ee);
   Color darkBrown = Color(0xFF743a34);
-  int idProduct;
   List<Product> products = [
     Product("Black Suit", "newarrival", 1),
     Product("Brown Suit", "newarrival", 2),
