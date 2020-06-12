@@ -4,10 +4,11 @@
 ![Jetlight studio](https://img.shields.io/badge/Made%20by-Jetlight%20studio-blue.svg?color=082544)
 
 ## Description:
-This is an app made with flutter, it's a profil UI with Dark And White theme.
-The changing of the theme is by clicking on the floating button.
+This is an app made with flutter, it's a showcase site of a suit store with a profil UI with Dark And Light theme.
 
 ## ScreenShot:
+<img src="Screenshot/photo_2020-06-13_00-28-31.jpg" />
+
 ### White Theme:
 <img src="Screenshot/white.jpg" />
 
